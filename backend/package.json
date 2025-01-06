@@ -8,7 +8,8 @@
     "build": "tsc --build",
     "start": "node dist/server.js",
     "vercel-build": "prisma generate && prisma migrate deploy",
-    "prisma:generate": "prisma generate"
+    "prisma:generate": "prisma generate",
+    "migrations": "npx prisma migrete dev"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",

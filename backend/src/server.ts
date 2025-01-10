@@ -13,7 +13,7 @@ app.use(fileUpload({
     limits: { fileSize: 50 * 1024 * 1024}
 }))
 app.use(cors({
-    origin: ['https://agroappbackend.vercel.app'],
+    origin: ['https://agroappfrontend.vercel.app/'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }))

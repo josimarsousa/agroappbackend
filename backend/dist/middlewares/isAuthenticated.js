@@ -6,7 +6,8 @@ function isAuthenticated(req, res, next) {
     //recebendo o token
     const authToken = req.headers.authorization;
     if (!authToken) {
-        return res.status(401).end();
+        //return res.status(401).end()
+        return res.status(401).json({ message: 'token nao fornecido' });
     }
     //verificando o token
     const [, token] = authToken.split(" ");

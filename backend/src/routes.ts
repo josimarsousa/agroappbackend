@@ -29,7 +29,7 @@ const upload = multer(uploadConfig.upload("./tmp"))
 
 //---rotas users----
 router.post('/users', isAuthenticated, new CreateUserController().handle)
-router.post('/session', isAuthenticated, new AuthUserController().handle)
+router.post('/session', new AuthUserController().handle)
 router.get('/userinfo', isAuthenticated, new  DetailUserController().handle)
 
 //---rotas category----

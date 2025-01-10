@@ -28,7 +28,7 @@ exports.router = router;
 const upload = (0, multer_1.default)(multer_2.default.upload("./tmp"));
 //---rotas users----
 router.post('/users', isAuthenticated_1.isAuthenticated, new CreateUserController_1.CreateUserController().handle);
-router.post('/session', isAuthenticated_1.isAuthenticated, new AuthUserController_1.AuthUserController().handle);
+router.post('/session', new AuthUserController_1.AuthUserController().handle);
 router.get('/userinfo', isAuthenticated_1.isAuthenticated, new DetailUserController_1.DetailUserController().handle);
 //---rotas category----
 router.post('/categories', isAuthenticated_1.isAuthenticated, new CreateCategoryController_1.CreateCategoryController().handle);

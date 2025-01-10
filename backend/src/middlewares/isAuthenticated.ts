@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { verify } from "jsonwebtoken";
+import jwt from 'jsonwebtoken'
 
 interface Payload{
     sub: string
@@ -14,7 +15,8 @@ function isAuthenticated(
    const authToken = req.headers.authorization
 
    if(!authToken){
-    return res.status(401).end()
+    //return res.status(401).end()
+    return res.status(401).json({ message: 'token nao fornecido'})
    }
    
    //verificando o token

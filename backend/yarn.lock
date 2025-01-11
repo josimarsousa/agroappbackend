@@ -529,7 +529,7 @@ express-fileupload@^1.5.1:
   dependencies:
     busboy "^1.6.0"
 
-express@^4.16.2, express@^4.21.2:
+express@^4.16.2, express@^4.17.1:
   version "4.21.2"
   resolved "https://registry.npmjs.org/express/-/express-4.21.2.tgz"
   integrity sha512-28HqgMZAmih1Czt9ny7qr6ek2qddF4FclbMzwhCREB6OFfH+rXAnuNCwo1/wFvrtbgsQDb4kSbX9de9lFbrXnA==

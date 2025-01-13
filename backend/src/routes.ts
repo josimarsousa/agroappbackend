@@ -28,7 +28,7 @@ const router = Router()
 const upload = multer(uploadConfig.upload("./tmp"))
 
 //---rotas users----
-router.post('/users', /*isAuthenticated,*/ new CreateUserController().handle)
+router.post('/users',  new CreateUserController().handle)
 router.post('/session', new AuthUserController().handle)
 router.get('/userinfo', isAuthenticated, new  DetailUserController().handle)
 

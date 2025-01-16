@@ -43,7 +43,7 @@ class CreateProductController{
                 category_id
             })
 
-            return res.json(product)
+            return product
         }
     }
 }

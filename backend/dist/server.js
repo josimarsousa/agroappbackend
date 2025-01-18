@@ -19,6 +19,20 @@ app.use((0, cors_1.default)({
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
+/*const authMiddleware = ( req: Request, res: Response, next: NextFunction) => {
+    const token = req.headers['authorization']
+    if (!token){
+        return res.status(401).send('token nao fornecido')
+    }
+    next()
+}
+
+app.use((req: Request, res: Response, next: NextFunction) => {
+    if(req.path === '/users' && req.method === 'POST'){
+        return next()
+    }
+    authMiddleware(req, res, next)
+})*/
 app.use(routes_1.router);
 app.use('/files', express_1.default.static(path_1.default.resolve(__dirname, '..', 'tmp')));
 app.use((err, req, res, next) => {
@@ -32,4 +46,4 @@ app.use((err, req, res, next) => {
         message: 'Internal server error.'
     });
 });
-app.listen(process.env.PORT, () => console.log("Servidor Online!!"));
+app.listen(process.env.PORT || 3000, () => console.log("Servidor Online!!"));

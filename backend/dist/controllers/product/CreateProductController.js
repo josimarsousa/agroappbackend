@@ -43,7 +43,7 @@ class CreateProductController {
                     banner: resultFile.url,
                     category_id
                 });
-                return res.json(product);
+                return product;
             }
         });
     }
